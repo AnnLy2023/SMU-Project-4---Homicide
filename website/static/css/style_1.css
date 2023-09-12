@@ -1,0 +1,98 @@
+/* #map
+{
+  height: 500px;
+}
+p {
+  color: black; 
+} */
+
+
+/* .filter-select {
+  font-size: 24px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+.container {
+  text-align: center;
+  display:flex;
+  justify-content:center;
+}
+
+
+/* .centered {
+  text-align: center;
+} */
+.card{
+  background:#F1FAEE;
+  /* width:300px; */
+  height:750px;
+  margin:10px;
+  border: radius 15px;
+  word-wrap: break-word;
+  /* flex-wrap:nowrap; */
+
+}
+/* .card-image {
+  height: 1000px;
+  width: 500px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background: no-repeat;
+  border-radius: 15px 15px 0 0;
+  background-attachment:local;
+
+} */
+/* .car-1 {
+  background-image: url("abi.png");
+  
+} 
+.car-2 {
+  background-image: url("van.png");
+}
+.car-3 {
+  background-image: url("carlos.png");
+} */
+
+.card:hover {
+  background-color:#C6D8D3;
+  cursor: pointer;
+  transform: scale(1.03);
+  transition:all 1s ease;
+}
+.card h1 {
+  color:black;
+}
+.card h2 {
+  color:black;
+}
+.card h3 {
+  color:black;
+}
+.card h4 {
+  color:black;
+}
+
+/* @media only screen and (max-width: 400px){
+  .card{
+    width:90%;
+    height:90%; */
+    /* margin:10px; */
+    
+  
+  /* }
+}
+@media only screen and (max-width: 800px){
+  .card{
+    width:90%;
+    height:90%; */
+    /* margin:10px; */
+    
+  
+  /* }
+} */
