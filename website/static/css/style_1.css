@@ -1,10 +1,10 @@
 
 .container {
   position: relative;
-  width: 800px;
+  width: 650px;
   align-items: relative;
   display:flex;
-  justify-content:center;
+  justify-content:relative;
   flex-wrap: wrap;
   padding: 30px;
   margin-top: 8%;
@@ -14,7 +14,7 @@
 .container.card.imgbx{
   position: relative;
   width: 160px;
-  height: 160px;
+  height: 200px;
   top: -20px;
   left: 10px;
   box-shadow: 0 5px 20px rgba(0,0,0,1.2);
@@ -35,7 +35,7 @@
   background:#F1FAEE;
   width: 308px;
   position: relative;
-  height: 400px;
+  height: 200px;
   background: #f0f0f0;
   margin:30px 10px;
   padding: 20px 15px;
@@ -58,15 +58,14 @@
   transition:all 1s ease;
 } 
 .card h1 {
-  color:black;
+  color:white;
 }
 .card h2 {
-  color:black;
+  color:white;
 }
 .card h3 {
-  color:black;
+  color:white;
 }
 .card h4 {
-  color:black;
+  color:white;
 } 
-
