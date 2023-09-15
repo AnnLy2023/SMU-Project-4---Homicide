@@ -72,24 +72,24 @@ def ml():
     # Return template and data
     return render_template("ml_form.html")
 
-# @app.route("/makePredictions", methods=["POST"])
-# def make_predictions():
-#     content = request.json["data"]
-#     print(content)
+@app.route("/makePredictions", methods=["POST"])
+def make_predictions():
+    content = request.json["data"]
+    print(content)
     
-#     # parse
-#     year = int(content["year"])
-#     age = int(content["age"])
-#     population = int(content["population"])
-#     sex = content["familySize"]
-#     race = content["race"]
-#     month = content["month"]
-#     season = content["season"]
-#     city = content["city"]
-#     state = content["state"]
+    # parse
+    year = int(content["year"])
+    age = int(content["age"])
+    population = int(content["population"])
+    sex = content["familySize"]
+    race = content["race"]
+    month = content["month"]
+    season = content["season"]
+    city = content["city"]
+    state = content["state"]
 
-#     preds = modelHelper.makePredictions(year, age, sex, population, race, month,season,city,state)
-#     return(jsonify({"ok": True, "prediction": str(preds)}))
+    preds = modelHelper.makePredictions(year, age, sex, population, race, month,season,city,state)
+    return(jsonify({"ok": True, "prediction": str(preds)}))
 
     
 

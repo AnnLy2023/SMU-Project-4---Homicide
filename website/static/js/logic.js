@@ -10,24 +10,28 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
-    var sex_flag = $("#gender").val();
+    var sex = $("#sex").val();
     var age = $("#age").val();
-    var fare = $("#fare").val();
-    var familySize = $("#familySize").val();
-    var p_class = $("#pclass").val();
-    var embarked = $("#embarked").val();
+    var race = $("#race").val();
+    var month = $("#month").val();
+    var weekday = $("#weekday").val();
+    var season = $("#season").val();
+    var city = $("#city").val();
+    var state = $("#state").val();
 
 
     // check if inputs are valid
 
     // create the payload
     var payload = {
-        "sex_flag": sex_flag,
+        "sex": sex,
         "age": age,
-        "fare": fare,
-        "familySize": familySize,
-        "p_class": p_class,
-        "embarked": embarked
+        "race": race,
+        "month": month,
+        "weekday": weekday,
+        "season": season,
+        "city": city,
+        "state": state
     }
 
     // Perform a POST request to the query URL
