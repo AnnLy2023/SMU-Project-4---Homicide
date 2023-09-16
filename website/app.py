@@ -3,9 +3,9 @@
 import numpy as np
 import pandas as pd 
 import json
-from sqlalchemy import create_engine, text, inspect
+# from sqlalchemy import create_engine, text, inspect
 from flask import Flask, render_template, redirect, request, jsonify
-# from modelHelper import ModelHelper
+from modelHelper import modelHelper
 # from sqlHelper import SQLHelper
 
 
@@ -76,20 +76,22 @@ def ml():
 def make_predictions():
     content = request.json["data"]
     print(content)
+    return(jsonify({"ok": True}))# test the readin of the logic.js file
     
     # parse
-    year = int(content["year"])
-    age = int(content["age"])
-    population = int(content["population"])
-    sex = content["familySize"]
-    race = content["race"]
-    month = content["month"]
-    season = content["season"]
-    city = content["city"]
-    state = content["state"]
+    # year = int(content["year"])
+    # age = int(content["age"])
+    # population = int(content["population"])
+    # sex = content["sex"]
+    # race = content["race"]
+    # month = content["month"]
+    # weekday = content["weekday"]
+    # season = content["season"]
+    # city = content["city"]
+    # state = content["state"]
 
-    preds = modelHelper.makePredictions(year, age, sex, population, race, month,season,city,state)
-    return(jsonify({"ok": True, "prediction": str(preds)}))
+    # preds = modelHelper.makePredictions(year, age, sex, population, race, month,weekday,season,city,state)
+    # return(jsonify({"ok": True, "prediction": str(preds)}))
 
     
 
