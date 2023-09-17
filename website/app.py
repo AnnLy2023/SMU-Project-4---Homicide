@@ -57,11 +57,10 @@ def plotly():
     return render_template("dashboard.html")
 
 
-
-@app.route("/df_profile")
+@app.route("/df1_profile")
 def df_profile():
     # Return template and data
-    return render_template("df_profile.html")
+    return render_template("df1_profile.html")
 
 @app.route("/resources")
 def resources():

@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 function initializeViz() {
     var placeholderDiv = document.getElementById("tableauViz");
-    var url = "https://public.tableau.com/views/Proj4_homicide_draft_2/Homicide-General";
+    var url = "https://public.tableau.com/views/SMU_Proj4_Group1_homicides_TD2/Dashboard1";
     var options = {
         width: placeholderDiv.offsetWidth,
         height: placeholderDiv.offsetHeight,
