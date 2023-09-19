@@ -72,7 +72,7 @@ def ml():
     return render_template("ml_form.html")
 
 @app.route("/makePredictions", methods=["POST"])
-def make_predictions():
+def predictions():
     content = request.json["data"]
     print(content)
     # return(jsonify({"ok": True}))# test the readin of the logic.js file
@@ -90,7 +90,7 @@ def make_predictions():
     state = content["state"]
 
     preds = modelHelper.makePredictions(year,age,population,sex,race,month,weekday,season,city,state)
-    return(jsonify({"ok": True, "prediction": str(preds)}))
+    return(jsonify({"ok": True, "no_arrest": preds[0],"arrest": preds[1]}))
    
     
 

@@ -125,6 +125,7 @@ class modelHelper():
         inp[f"season_{season}"] = 1
         inp[f"city_{city}"] = 1
         inp[f"state_{state}"] = 1
+        print (inp)
 
         inp = pd.DataFrame([inp])
         rtn = lgbm_model.predict_proba(inp)[0]

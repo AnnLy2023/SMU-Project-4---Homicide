@@ -3,13 +3,13 @@ $(document).ready(function() {
 
     $("#filter").click(function() {
         // alert("button clicked!");
-        makePredictions();
+        make_predictions();
     });
 });
 
 
 // call Flask API endpoint
-function makePredictions() {
+function make_predictions() {
     var sex = $("#sex").val();
     var age = $("#age").val();
     var race = $("#race").val();
@@ -23,7 +23,7 @@ function makePredictions() {
 
 
     // check if inputs are valid
-
+    
     // create the payload
     var payload = {
         "sex": sex,
@@ -35,25 +35,29 @@ function makePredictions() {
         "season": season,
         "city": city,
         "state": state,
-        "population": population
-    }
-
+        "population": population,
+    }    
+    console.log(payload)
+    
+   
+    
     // Perform a POST request to the query URL
     $.ajax({
         type: "POST",
         url: "/makePredictions",
         contentType: 'application/json;charset=UTF-8',
         data: JSON.stringify({ "data": payload }),
-        success: function(returnedData) {
+        success: function(response) { 
             // print it
-            console.log(returnedData);
-
-            if (returnedData["prediction"] === "1") {
-                $("#output").text("Arrest made!");
-            } else {
-                $("#output").text("No Arrest made!");
+            console.log(response);
+            
+            if (response["arrest"] > 0.5) {
+                $("#output").text(`Arrest made with probability ${response["arrest"].toFixed(2)}`)
             }
-
+            else {
+                $("#output").text(`No arrest made with probability ${response["no_arrest"].toFixed(2)}`)
+            }    
+         
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {
             alert("Status: " + textStatus);
