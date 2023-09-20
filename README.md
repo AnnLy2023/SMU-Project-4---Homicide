@@ -1,4 +1,4 @@
-# SMU-Project-4---Homicide
+# SMU-Project-4---Homicide In The Past Decade (2007-2017)
 
 ![image](https://github.com/AnnLy2023/SMU-Project-4---Homicide/assets/129100456/e9eb0b93-3a0e-4269-991c-7cd868012373)
 
